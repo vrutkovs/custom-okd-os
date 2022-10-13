@@ -3,7 +3,7 @@ name: Create and publish OS with DRBD 9 kernel
 on:
   push:
     branches: ['main']
-    paths: ['drdb']
+    paths: ['drdb', '.github/workflows/drbd.yml']
 
 env:
   REGISTRY: ghcr.io
