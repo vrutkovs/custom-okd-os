@@ -12,4 +12,5 @@ RUN make WHAT='cmd/kubelet'
 
 FROM registry.ci.openshift.org/origin/4.12:machine-os-content
 COPY --from=builder /go/src/k8s.io/kubernetes/_output/local/bin/linux/amd64/kubelet /usr/bin/kubelet
+ENV container oci
 RUN ostree container commit
