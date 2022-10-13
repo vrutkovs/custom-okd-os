@@ -6,7 +6,7 @@ RUN dnf install -y git-core make gcc golang rsync \
 WORKDIR /go/src/k8s.io/kubernetes
 RUN git init \
     && git remote add origin ${KUBERNETES_REPO} \
-    && git fetch origin --depth=1 \
+    && git fetch origin \
     && git reset ${KUBERNETES_REPO_COMMIT} --hard
 RUN make WHAT='cmd/kubelet'
 
