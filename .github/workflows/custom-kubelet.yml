@@ -43,4 +43,4 @@ jobs:
           context: custom-kubelet
           push: true
           tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
+          labels: custom-kubelet
