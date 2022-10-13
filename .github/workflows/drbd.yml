@@ -42,5 +42,5 @@ jobs:
         with:
           context: drbd
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: custom-kubelet
+          tags: custom-kubelet
+          labels: ${{ steps.meta.outputs.labels }}
