@@ -3,6 +3,7 @@ name: Create and publish OS with custom kubelet
 on:
   push:
     branches: ['main']
+    paths: ['custom-kubelet']
 
 env:
   REGISTRY: ghcr.io

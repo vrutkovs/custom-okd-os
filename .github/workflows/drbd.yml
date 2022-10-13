@@ -3,6 +3,7 @@ name: Create and publish OS with DRBD 9 kernel
 on:
   push:
     branches: ['main']
+    paths: ['drdb']
 
 env:
   REGISTRY: ghcr.io
