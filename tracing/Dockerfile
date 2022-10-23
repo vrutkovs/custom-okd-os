@@ -28,7 +28,7 @@ RUN make
 
 FROM quay.io/fedora/fedora:37 as kubelet-builder
 ENV KUBERNETES_REPO https://github.com/vrutkovs/kubernetes
-ENV KUBERNETES_REPO_COMMIT b3cfeb24328e815b8194cb013e92bd38300fc8ea
+ENV KUBERNETES_REPO_COMMIT 1c58116084ca655a12ac68c6504e53c2f426bf7f
 RUN dnf install -y git-core make gcc golang rsync \
     && dnf clean all
 WORKDIR /go/src/k8s.io/kubernetes
