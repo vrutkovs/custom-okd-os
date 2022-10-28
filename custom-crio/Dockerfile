@@ -1,6 +1,6 @@
 FROM quay.io/fedora/fedora:37 as builder
 ENV CRIO_REPO https://github.com/vrutkovs/cri-o
-ENV CRIO_REPO_COMMIT 7713f00fd
+ENV CRIO_REPO_COMMIT 10b9571bf
 RUN dnf install -y \
   git-core \
   containers-common \
