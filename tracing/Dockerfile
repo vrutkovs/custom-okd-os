@@ -1,6 +1,6 @@
 FROM quay.io/fedora/fedora:37 as crio-builder
-ENV CRIO_REPO https://github.com/vrutkovs/cri-o
-ENV CRIO_REPO_COMMIT 249f35538
+ENV CRIO_REPO https://github.com/cri-o/cri-o
+ENV CRIO_REPO_COMMIT 0bfbd36f2
 RUN dnf install -y \
   git-core \
   containers-common \
@@ -28,7 +28,7 @@ RUN make
 
 FROM quay.io/fedora/fedora:37 as kubelet-builder
 ENV KUBERNETES_REPO https://github.com/vrutkovs/kubernetes
-ENV KUBERNETES_REPO_COMMIT a45de03dca2
+ENV KUBERNETES_REPO_COMMIT 41bdccc8713
 RUN dnf install -y git-core make gcc golang rsync \
     && dnf clean all
 WORKDIR /go/src/k8s.io/kubernetes
